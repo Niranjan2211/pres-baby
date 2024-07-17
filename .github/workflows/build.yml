@@ -1,4 +1,4 @@
-name: Deploy Bicep file in Presbyterian
+name: Deploy Bicep file in Pres
 on:
   workflow_dispatch:
     inputs:

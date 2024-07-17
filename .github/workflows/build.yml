@@ -116,15 +116,15 @@ jobs:
       uses: actions/checkout@v3
 
   
-     - name: Deploy Bicep file
-       uses: azure/arm-deploy@v2
-       with:
-         subscriptionId: ${{ secrets.PRESBYTERIAN_SUBSCRIPTION }}
-         scope: subscription
-         region: ${{ github.event.inputs.location }}
-         template: ./${{inputs.sequence}}/main.bicep
-         parameters: ${{ toJson(fromJson(steps.set-params.outputs.parameters_json)) }}
-         failOnStdErr: false
+    - name: Deploy Bicep file
+      uses: azure/arm-deploy@v2
+      with:
+       subscriptionId: ${{ secrets.PRESBYTERIAN_SUBSCRIPTION }}
+        scope: subscription
+        region: ${{ github.event.inputs.location }}
+        template: ./${{inputs.sequence}}/main.bicep
+        parameters: ${{ toJson(fromJson(steps.set-params.outputs.parameters_json)) }}
+        failOnStdErr: false
 
              
   # deploy:

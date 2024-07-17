@@ -109,6 +109,7 @@ jobs:
        # echo "Deploying with JSON Parameters:"
        # echo "${{ steps.set-params.outputs.outparameters_json }}"
        # pwd
+       echo "${{steps.set-params.outputs}}"
        echo "${{steps.set-params.outputs.fileparameters_json}}"
        # echo "afterjsonparsing"
        # echo "${{ toJson(fromJson(steps.set-params.outputs.fileparameters_json))}}"

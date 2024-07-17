@@ -102,16 +102,17 @@ jobs:
 
     - name: Print parameters
       run: |
-       cat param.json
-       cat param1.json
-       echo "Deploying with Parameters:"
-       echo "${{steps.set-params.outputs.outparameters}}"
-       echo "Deploying with JSON Parameters:"
-       echo "${{ steps.set-params.outputs.outparameters_json }}"
-       pwd
+       # cat param.json
+       # cat param1.json
+       # echo "Deploying with Parameters:"
+       # echo "${{steps.set-params.outputs.outparameters}}"
+       # echo "Deploying with JSON Parameters:"
+       # echo "${{ steps.set-params.outputs.outparameters_json }}"
+       # pwd
        echo "${{steps.set-params.outputs.fileparameters_json}}"
-       echo "afterjsonparsing"
-       echo "${{ toJson(fromJson(steps.set-params.outputs.fileparameters_json))}}"
+       # echo "afterjsonparsing"
+       # echo "${{ toJson(fromJson(steps.set-params.outputs.fileparameters_json))}}"
+       
     - name: Checkout code
       uses: actions/checkout@v3
 
